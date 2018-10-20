@@ -32,6 +32,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+        main {
+            res.srcDirs =
+                [
+                            'src/main/res/layouts/coming_soon',
+                            'src/main/res/layouts/top_up',
+                            'src/main/res/layouts',
+                            'src/main/res'
+                ]
+        }
+    }
 }
 
 // Configuration for the Kotlin-dokka documentation engine

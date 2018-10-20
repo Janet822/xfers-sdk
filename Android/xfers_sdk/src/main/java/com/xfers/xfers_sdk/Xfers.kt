@@ -5,6 +5,7 @@ import android.content.Intent
 import com.xfers.xfers_sdk.utils.NetworkClient
 import com.xfers.xfers_sdk.utils.XfersConfiguration
 import com.xfers.xfers_sdk.view.ComingSoonActivity
+import com.xfers.xfers_sdk.view.TopUpFlowActivity
 import java.io.BufferedInputStream
 import java.math.BigInteger
 
@@ -41,7 +42,7 @@ class Xfers(val context: Context) {
         }
 
         fun startTopupFlow() {
-            context.startActivity(Intent(context, ComingSoonActivity::class.java))
+            context.startActivity(Intent(context, TopUpFlowActivity::class.java))
         }
 
         fun startKYCFlow() {
