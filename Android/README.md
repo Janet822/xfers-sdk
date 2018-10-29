@@ -37,7 +37,7 @@ You will need the following in order to successfully integrate with Xfers Androi
 1. Merchant name - the name that you prefer to be addressed by through the SDK, for e.g. Xfers.
 1. Merchant logo - the logo that you prefer to have displayed when we refer to you through the SDK, for e.g. the Xfers logo.
 1. Merchant logo's tint - the tint of your logo that you prefer to have displayed when we refer to you through the SDK, for e.g. the Xfers logo's blue.
-1. Merchant's api_base - the base url of your backend server, we will be sending HTTP requests to this server during the authentication phase, see [Backend integration](#backend-integration) for more information as to how to set up this backend server.
+1. Merchant's api_base - the base url of your backend server, we will be sending HTTP requests to this server during the authentication phase, see `Backend integration` for more information as to how to set up this backend server.
 
 To set up the above details, in your main activity, add the following code into the `onCreate` method:
 
@@ -109,8 +109,7 @@ This is the flow that you'll call in order to allow the user to topup to their X
 ```Java
 new Xfers(this).flow.startTopupFlow();
 ```
-
-![Xfers Topup Flow UI](https://user-images.githubusercontent.com/6291947/47300659-a55e9600-d64f-11e8-90a1-a485dc3443fd.png)
+![screenshot 2018-10-29 at 3 29 26 pm](https://user-images.githubusercontent.com/32061326/47635295-72f0f380-db8f-11e8-8d4b-caba511a7235.png)
 
 3. Xfers KYC Flow
 
@@ -119,8 +118,7 @@ This is the flow that you'll call in order to allow the user to KYC with Xfers, 
 ```Java
 new Xfers(this).flow.startKYCFlow();
 ```
-
-![screenshot 2018-10-29 at 3 29 26 pm](https://user-images.githubusercontent.com/32061326/47635295-72f0f380-db8f-11e8-8d4b-caba511a7235.png)
+![screenshot 2018-10-29 at 3 32 34 pm](https://user-images.githubusercontent.com/32061326/47637106-8f902a00-db95-11e8-8aff-ea21c1fcd838.png)
 
 4. Xfers Manage Banks Flow
 
@@ -259,7 +257,7 @@ new Xfers(this).startConnectFlow();
 
 Part 1:
 
-- Your user will be prompted to key in their phone number, once the user has entered their phone number, the SDK will proceed to call the url `merchantApiBase/signup_login`, it has to be set up as in the above under [Backend Integration](#backend-integration)
+- Your user will be prompted to key in their phone number, once the user has entered their phone number, the SDK will proceed to call the url `merchantApiBase/signup_login`, it has to be set up as in the above under "Backend Integration"
 
 - The SDK will call the url with the following format: `{"phoneNumber":"<a_phone_number>"`
 
@@ -269,7 +267,7 @@ Part 1:
 
 Part 2:
 
-- Your user will be prompted to key in the OTP that they have received, once the user has entered the OTP, the SDK will proceed to call the url `merchantApiBase/get_token`, it has to be set up as in the above under [Backend Integration](#backend-integration)
+- Your user will be prompted to key in the OTP that they have received, once the user has entered the OTP, the SDK will proceed to call the url `merchantApiBase/get_token`, it has to be set up as in the above under "Backend Integration"
 
 - The SDK will call the url with the following format: `{"OTP":"<an_OTP>"`
 
@@ -279,7 +277,7 @@ Part 2:
 
 After this is set up, you can call any of the other flows and UI to interact with the user's Xfers account.
 
-### Initialising the Xfers SDK (With the user's `apiKey`)
+### Initilisaing the Xfers SDK (With the user's `apiKey`)
 
 If you have already connected with the user before through the section "Setting up the Xfers Connect Flow" and have the user's `apiKey` in your server, you can query your own server the `apiKey` and call the following command to have the SDK initialised:
 
